@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração de Produtos</title>
+    <link rel="stylesheet" href="style/styles_admin.css">
+</head>
+<body>
+    <h1>Administração de Produtos</h1>
+
+    <!-- Formulário para adicionar produto -->
+    <div class="form-container">
+        <h2>Adicionar Produto</h2>
+        <form id="add-product-form">
+            <label for="product-name">Nome do Produto:</label>
+            <input type="text" id="product-name" required><br>
+
+            <label for="product-category">Categoria:</label>
+            <select id="product-category" required>
+                <option value="" disabled selected>Selecione uma categoria</option>
+                <option value="Moda-Masculina">Moda-Masculina</option>
+                <option value="Moda-Feminina">Moda-Feminina</option>
+                <option value="Unissex">Unissex</option>
+                <option value="Infantil">Infantil</option>
+                <option value="Beleza">Beleza</option>
+                <option value="Tenis">Tênis</option>
+                <option value="Eletrônicos">Eletrônicos</option>
+            </select><br>
+
+            <label for="product-image">Imagem (URL):</label>
+            <input type="text" id="product-image" required><br>
+
+            <label for="product-link">Link do Produto:</label>
+            <input type="url" id="product-link" required><br>
+
+            <button type="submit">Adicionar Produto</button>
+        </form>
+    </div>
+
+
+    <!-- Formulário para remover produto -->
+    <div class="form-container">
+        <h2>Remover Produto</h2>
+        <form id="remove-product-form">
+            <label for="product-id">ID do Produto:</label>
+            <input type="number" id="product-id" required><br>
+            <button type="submit">Remover Produto</button>
+        </form>
+    </div>
+
+    <!-- Container de produtos -->
+    <div id="produtos-container"></div>
+
+    <!-- Script -->
+    <script src="script/admin.js"></script>
+</body>
+</html>

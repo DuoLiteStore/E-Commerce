@@ -1,0 +1,125 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #666; /* Mudado para tom de cinza */
+    margin-bottom: 20px;
+}
+
+/* Estilo das seções de formulários */
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Estilo dos rótulos dos campos de formulário */
+.form-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555; /* Mudado para tom de cinza */
+}
+
+/* Estilo dos campos de entrada de formulário (input, select) */
+.form-container input, .form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Mudado para tom de cinza */
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Estilo do botão de envio */
+.form-container button {
+    background-color: #888; /* Mudado para tom de cinza */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #777; /* Mudado para tom de cinza */
+}
+
+/* Estilo para a lista de produtos */
+#produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+/* Estilo individual de cada card de produto */
+.produto {
+    background-color: #fff;
+    border: 1px solid #ddd; /* Mudado para tom de cinza */
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para o nome do produto */
+.produto p {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estilo para os links de produtos */
+.produto a {
+    color: #888; /* Mudado para tom de cinza */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.produto a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .form-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #produtos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 90%;
+    }
+}
