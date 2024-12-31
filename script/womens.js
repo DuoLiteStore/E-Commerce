@@ -10,7 +10,8 @@ function renderProductList() {
     // Limpa a lista atual
     productContainer.innerHTML = '';
 
-    const filteredProducts = products.filter(product => product.category === 'Moda-Feminina');
+    const filteredProducts = products.filter(product => product.category === 'Unissex' || 
+                                                    product.category === 'Moda-Feminina');
 
     if (filteredProducts.length === 0) {
         productContainer.innerHTML = '<p>Nenhum produto de Moda Feminina disponível.</p>';
