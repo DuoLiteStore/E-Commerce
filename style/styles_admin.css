@@ -17,7 +17,7 @@ body {
 /* Título principal */
 h1 {
     text-align: center;
-    color: #666; /* Mudado para tom de cinza */
+    color: #666;
     margin-bottom: 20px;
 }
 
@@ -35,7 +35,7 @@ h1 {
     font-weight: bold;
     margin-bottom: 5px;
     display: block;
-    color: #555; /* Mudado para tom de cinza */
+    color: #555;
 }
 
 /* Estilo dos campos de entrada de formulário (input, select) */
@@ -43,14 +43,14 @@ h1 {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc; /* Mudado para tom de cinza */
+    border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
 }
 
 /* Estilo do botão de envio */
 .form-container button {
-    background-color: #888; /* Mudado para tom de cinza */
+    background-color: #888;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -60,7 +60,7 @@ h1 {
 }
 
 .form-container button:hover {
-    background-color: #777; /* Mudado para tom de cinza */
+    background-color: #777;
 }
 
 /* Estilo para a lista de produtos */
@@ -74,12 +74,18 @@ h1 {
 /* Estilo individual de cada card de produto */
 .produto {
     background-color: #fff;
-    border: 1px solid #ddd; /* Mudado para tom de cinza */
+    border: 1px solid #ddd;
     border-radius: 8px;
     width: 250px;
     text-align: center;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .produto img {
@@ -98,7 +104,7 @@ h1 {
 
 /* Estilo para os links de produtos */
 .produto a {
-    color: #888; /* Mudado para tom de cinza */
+    color: #888;
     text-decoration: none;
     font-weight: bold;
 }
@@ -109,6 +115,15 @@ h1 {
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
     .form-container {
         width: 100%;
         margin-bottom: 20px;
@@ -121,5 +136,32 @@ h1 {
 
     .produto {
         width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .form-container input,
+    .form-container select,
+    .form-container button {
+        font-size: 14px;
+    }
+}
+
+/* Responsividade para telas muito pequenas (ex: smartphones em orientação retrato) */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    .produto {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .produto p {
+        font-size: 1rem;
+    }
+
+    .form-container button {
+        font-size: 14px;
     }
 }
