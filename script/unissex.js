@@ -10,10 +10,7 @@ function renderProductList() {
     // Limpa a lista atual
     productContainer.innerHTML = '';
 
-    const filteredProducts = products.filter(product => 
-        product.category === 'Unissex' || 
-        product.category === 'Moda-Masculina' || 
-        product.category === 'Moda-Feminina');
+    const filteredProducts = products.filter(product => product.category === 'Unissex');
     
 
     if (filteredProducts.length === 0) {
